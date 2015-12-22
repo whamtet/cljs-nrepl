@@ -15,6 +15,11 @@
 (cljs.nodejs/enable-util-print!)
 (def st (cljs/empty-state))
 
+(defn redirect [url]
+  {:status 302
+   :headers {:location url}
+   :body ""})
+
 (defn clj->json
   [ds]
   (-> ds clj->js js/JSON.stringify))
@@ -114,6 +119,8 @@
   (ANY "/test" []
        (let-realised [result (eval-str "(+ 1 2)")]
                      {:body (str @result) :status 200}))
+  (GET "/" []
+       (redirect "/index.html"))
   )
 
 (defn main [& args]
