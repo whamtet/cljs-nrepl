@@ -1,6 +1,6 @@
 (defproject cljs-nrepl "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
-  :url "http://example.com/FIXME"
+  :description "Pure Clojurescript Nrepl Server"
+  :url "https://github.com/whamtet/cljs-nrepl"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.170"]
                  [org.clojure/data.json "0.2.6" :classifier "aot"]

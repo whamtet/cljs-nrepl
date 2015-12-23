@@ -27,33 +27,33 @@ return new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"qu
 })());
 });
 dogfort.middleware.params.slurp = (function dogfort$middleware$params$slurp(body){
-var promise__5377__auto__ = redlobster.promise.promise.call(null);
-var realise__5378__auto__ = ((function (promise__5377__auto__){
-return (function (promise__5377__auto____$1,value__5379__auto__){
-return redlobster.promise.realise.call(null,promise__5377__auto____$1,value__5379__auto__);
-});})(promise__5377__auto__))
+var promise__9642__auto__ = redlobster.promise.promise.call(null);
+var realise__9643__auto__ = ((function (promise__9642__auto__){
+return (function (promise__9642__auto____$1,value__9644__auto__){
+return redlobster.promise.realise.call(null,promise__9642__auto____$1,value__9644__auto__);
+});})(promise__9642__auto__))
 ;
-var realise_error__5380__auto__ = ((function (promise__5377__auto__,realise__5378__auto__){
-return (function (promise__5377__auto____$1,value__5379__auto__){
-return redlobster.promise.realise_error.call(null,promise__5377__auto____$1,value__5379__auto__);
-});})(promise__5377__auto__,realise__5378__auto__))
+var realise_error__9645__auto__ = ((function (promise__9642__auto__,realise__9643__auto__){
+return (function (promise__9642__auto____$1,value__9644__auto__){
+return redlobster.promise.realise_error.call(null,promise__9642__auto____$1,value__9644__auto__);
+});})(promise__9642__auto__,realise__9643__auto__))
 ;
-var realise = cljs.core.partial.call(null,realise__5378__auto__,promise__5377__auto__);
-var realise_error = cljs.core.partial.call(null,realise_error__5380__auto__,promise__5377__auto__);
-var sb_14958 = (new Array());
-body.on("data",((function (sb_14958,promise__5377__auto__,realise__5378__auto__,realise_error__5380__auto__,realise,realise_error){
-return (function (p1__14957_SHARP_){
-return sb_14958.push(p1__14957_SHARP_);
-});})(sb_14958,promise__5377__auto__,realise__5378__auto__,realise_error__5380__auto__,realise,realise_error))
+var realise = cljs.core.partial.call(null,realise__9643__auto__,promise__9642__auto__);
+var realise_error = cljs.core.partial.call(null,realise_error__9645__auto__,promise__9642__auto__);
+var sb_9860 = (new Array());
+body.on("data",((function (sb_9860,promise__9642__auto__,realise__9643__auto__,realise_error__9645__auto__,realise,realise_error){
+return (function (p1__9859_SHARP_){
+return sb_9860.push(p1__9859_SHARP_);
+});})(sb_9860,promise__9642__auto__,realise__9643__auto__,realise_error__9645__auto__,realise,realise_error))
 );
 
-body.on("end",((function (sb_14958,promise__5377__auto__,realise__5378__auto__,realise_error__5380__auto__,realise,realise_error){
+body.on("end",((function (sb_9860,promise__9642__auto__,realise__9643__auto__,realise_error__9645__auto__,realise,realise_error){
 return (function (){
-return realise.call(null,sb_14958.join(""));
-});})(sb_14958,promise__5377__auto__,realise__5378__auto__,realise_error__5380__auto__,realise,realise_error))
+return realise.call(null,sb_9860.join(""));
+});})(sb_9860,promise__9642__auto__,realise__9643__auto__,realise_error__9645__auto__,realise,realise_error))
 );
 
-return promise__5377__auto__;
+return promise__9642__auto__;
 });
 /**
  * Parse and assoc parameters from the request body with the request.
@@ -91,14 +91,14 @@ return handler.call(null,cljs.core.merge_with.call(null,cljs.core.merge,request,
  */
 dogfort.middleware.params.params_request = (function dogfort$middleware$params$params_request(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___14964 = arguments.length;
-var i__5202__auto___14965 = (0);
+var len__5201__auto___9866 = arguments.length;
+var i__5202__auto___9867 = (0);
 while(true){
-if((i__5202__auto___14965 < len__5201__auto___14964)){
-args__5208__auto__.push((arguments[i__5202__auto___14965]));
+if((i__5202__auto___9867 < len__5201__auto___9866)){
+args__5208__auto__.push((arguments[i__5202__auto___9867]));
 
-var G__14966 = (i__5202__auto___14965 + (1));
-i__5202__auto___14965 = G__14966;
+var G__9868 = (i__5202__auto___9867 + (1));
+i__5202__auto___9867 = G__9868;
 continue;
 } else {
 }
@@ -109,9 +109,9 @@ var argseq__5209__auto__ = ((((2) < args__5208__auto__.length))?(new cljs.core.I
 return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),(arguments[(1)]),argseq__5209__auto__);
 });
 
-dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic = (function (handler,request,p__14962){
-var vec__14963 = p__14962;
-var opts = cljs.core.nth.call(null,vec__14963,(0),null);
+dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic = (function (handler,request,p__9864){
+var vec__9865 = p__9864;
+var opts = cljs.core.nth.call(null,vec__9865,(0),null);
 var encoding = (function (){var or__4143__auto__ = new cljs.core.Keyword(null,"encoding","encoding",1728578272).cljs$core$IFn$_invoke$arity$1(opts);
 if(cljs.core.truth_(or__4143__auto__)){
 return or__4143__auto__;
@@ -134,12 +134,12 @@ return dogfort.middleware.params.assoc_form_params.call(null,handler,request__$1
 
 dogfort.middleware.params.params_request.cljs$lang$maxFixedArity = (2);
 
-dogfort.middleware.params.params_request.cljs$lang$applyTo = (function (seq14959){
-var G__14960 = cljs.core.first.call(null,seq14959);
-var seq14959__$1 = cljs.core.next.call(null,seq14959);
-var G__14961 = cljs.core.first.call(null,seq14959__$1);
-var seq14959__$2 = cljs.core.next.call(null,seq14959__$1);
-return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic(G__14960,G__14961,seq14959__$2);
+dogfort.middleware.params.params_request.cljs$lang$applyTo = (function (seq9861){
+var G__9862 = cljs.core.first.call(null,seq9861);
+var seq9861__$1 = cljs.core.next.call(null,seq9861);
+var G__9863 = cljs.core.first.call(null,seq9861__$1);
+var seq9861__$2 = cljs.core.next.call(null,seq9861__$1);
+return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$variadic(G__9862,G__9863,seq9861__$2);
 });
 /**
  * Middleware to parse urlencoded parameters from the query string and form
@@ -158,14 +158,14 @@ return dogfort.middleware.params.params_request.cljs$core$IFn$_invoke$arity$vari
  */
 dogfort.middleware.params.wrap_params = (function dogfort$middleware$params$wrap_params(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___14971 = arguments.length;
-var i__5202__auto___14972 = (0);
+var len__5201__auto___9873 = arguments.length;
+var i__5202__auto___9874 = (0);
 while(true){
-if((i__5202__auto___14972 < len__5201__auto___14971)){
-args__5208__auto__.push((arguments[i__5202__auto___14972]));
+if((i__5202__auto___9874 < len__5201__auto___9873)){
+args__5208__auto__.push((arguments[i__5202__auto___9874]));
 
-var G__14973 = (i__5202__auto___14972 + (1));
-i__5202__auto___14972 = G__14973;
+var G__9875 = (i__5202__auto___9874 + (1));
+i__5202__auto___9874 = G__9875;
 continue;
 } else {
 }
@@ -176,22 +176,22 @@ var argseq__5209__auto__ = ((((1) < args__5208__auto__.length))?(new cljs.core.I
 return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5209__auto__);
 });
 
-dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__14969){
-var vec__14970 = p__14969;
-var options = cljs.core.nth.call(null,vec__14970,(0),null);
-return ((function (vec__14970,options){
+dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__9871){
+var vec__9872 = p__9871;
+var options = cljs.core.nth.call(null,vec__9872,(0),null);
+return ((function (vec__9872,options){
 return (function (request){
 return dogfort.middleware.params.params_request.call(null,handler,request,options);
 });
-;})(vec__14970,options))
+;})(vec__9872,options))
 });
 
 dogfort.middleware.params.wrap_params.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.params.wrap_params.cljs$lang$applyTo = (function (seq14967){
-var G__14968 = cljs.core.first.call(null,seq14967);
-var seq14967__$1 = cljs.core.next.call(null,seq14967);
-return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic(G__14968,seq14967__$1);
+dogfort.middleware.params.wrap_params.cljs$lang$applyTo = (function (seq9869){
+var G__9870 = cljs.core.first.call(null,seq9869);
+var seq9869__$1 = cljs.core.next.call(null,seq9869);
+return dogfort.middleware.params.wrap_params.cljs$core$IFn$_invoke$arity$variadic(G__9870,seq9869__$1);
 });
 
 //# sourceMappingURL=params.js.map

@@ -28,28 +28,28 @@ dogfort.middleware.cookies.set_cookie_attrs = new cljs.core.PersistentArrayMap(n
  * Turn a HTTP Cookie header into a list of name/value pairs.
  */
 dogfort.middleware.cookies.parse_cookie_header = (function dogfort$middleware$cookies$parse_cookie_header(header){
-var iter__4915__auto__ = (function dogfort$middleware$cookies$parse_cookie_header_$_iter__14810(s__14811){
+var iter__4915__auto__ = (function dogfort$middleware$cookies$parse_cookie_header_$_iter__9689(s__9690){
 return (new cljs.core.LazySeq(null,(function (){
-var s__14811__$1 = s__14811;
+var s__9690__$1 = s__9690;
 while(true){
-var temp__4425__auto__ = cljs.core.seq.call(null,s__14811__$1);
+var temp__4425__auto__ = cljs.core.seq.call(null,s__9690__$1);
 if(temp__4425__auto__){
-var s__14811__$2 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__14811__$2)){
-var c__4913__auto__ = cljs.core.chunk_first.call(null,s__14811__$2);
+var s__9690__$2 = temp__4425__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__9690__$2)){
+var c__4913__auto__ = cljs.core.chunk_first.call(null,s__9690__$2);
 var size__4914__auto__ = cljs.core.count.call(null,c__4913__auto__);
-var b__14813 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
-if((function (){var i__14812 = (0);
+var b__9692 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
+if((function (){var i__9691 = (0);
 while(true){
-if((i__14812 < size__4914__auto__)){
-var vec__14816 = cljs.core._nth.call(null,c__4913__auto__,i__14812);
-var _ = cljs.core.nth.call(null,vec__14816,(0),null);
-var name = cljs.core.nth.call(null,vec__14816,(1),null);
-var value = cljs.core.nth.call(null,vec__14816,(2),null);
-cljs.core.chunk_append.call(null,b__14813,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [name,value], null));
+if((i__9691 < size__4914__auto__)){
+var vec__9695 = cljs.core._nth.call(null,c__4913__auto__,i__9691);
+var _ = cljs.core.nth.call(null,vec__9695,(0),null);
+var name = cljs.core.nth.call(null,vec__9695,(1),null);
+var value = cljs.core.nth.call(null,vec__9695,(2),null);
+cljs.core.chunk_append.call(null,b__9692,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [name,value], null));
 
-var G__14818 = (i__14812 + (1));
-i__14812 = G__14818;
+var G__9697 = (i__9691 + (1));
+i__9691 = G__9697;
 continue;
 } else {
 return true;
@@ -57,16 +57,16 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14813),dogfort$middleware$cookies$parse_cookie_header_$_iter__14810.call(null,cljs.core.chunk_rest.call(null,s__14811__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9692),dogfort$middleware$cookies$parse_cookie_header_$_iter__9689.call(null,cljs.core.chunk_rest.call(null,s__9690__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14813),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9692),null);
 }
 } else {
-var vec__14817 = cljs.core.first.call(null,s__14811__$2);
-var _ = cljs.core.nth.call(null,vec__14817,(0),null);
-var name = cljs.core.nth.call(null,vec__14817,(1),null);
-var value = cljs.core.nth.call(null,vec__14817,(2),null);
-return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [name,value], null),dogfort$middleware$cookies$parse_cookie_header_$_iter__14810.call(null,cljs.core.rest.call(null,s__14811__$2)));
+var vec__9696 = cljs.core.first.call(null,s__9690__$2);
+var _ = cljs.core.nth.call(null,vec__9696,(0),null);
+var name = cljs.core.nth.call(null,vec__9696,(1),null);
+var value = cljs.core.nth.call(null,vec__9696,(2),null);
+return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [name,value], null),dogfort$middleware$cookies$parse_cookie_header_$_iter__9689.call(null,cljs.core.rest.call(null,s__9690__$2)));
 }
 } else {
 return null;
@@ -84,24 +84,24 @@ dogfort.middleware.cookies.strip_quotes = (function dogfort$middleware$cookies$s
 return clojure.string.replace.call(null,value,/^\"|\"$/,"");
 });
 dogfort.middleware.cookies.decode_values = (function dogfort$middleware$cookies$decode_values(cookies,decoder){
-var iter__4915__auto__ = (function dogfort$middleware$cookies$decode_values_$_iter__14827(s__14828){
+var iter__4915__auto__ = (function dogfort$middleware$cookies$decode_values_$_iter__9706(s__9707){
 return (new cljs.core.LazySeq(null,(function (){
-var s__14828__$1 = s__14828;
+var s__9707__$1 = s__9707;
 while(true){
-var temp__4425__auto__ = cljs.core.seq.call(null,s__14828__$1);
+var temp__4425__auto__ = cljs.core.seq.call(null,s__9707__$1);
 if(temp__4425__auto__){
-var s__14828__$2 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__14828__$2)){
-var c__4913__auto__ = cljs.core.chunk_first.call(null,s__14828__$2);
+var s__9707__$2 = temp__4425__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__9707__$2)){
+var c__4913__auto__ = cljs.core.chunk_first.call(null,s__9707__$2);
 var size__4914__auto__ = cljs.core.count.call(null,c__4913__auto__);
-var b__14830 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
-if((function (){var i__14829 = (0);
+var b__9709 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
+if((function (){var i__9708 = (0);
 while(true){
-if((i__14829 < size__4914__auto__)){
-var vec__14833 = cljs.core._nth.call(null,c__4913__auto__,i__14829);
-var name = cljs.core.nth.call(null,vec__14833,(0),null);
-var value = cljs.core.nth.call(null,vec__14833,(1),null);
-cljs.core.chunk_append.call(null,b__14830,(function (){var temp__4423__auto__ = decoder.call(null,dogfort.middleware.cookies.strip_quotes.call(null,value));
+if((i__9708 < size__4914__auto__)){
+var vec__9712 = cljs.core._nth.call(null,c__4913__auto__,i__9708);
+var name = cljs.core.nth.call(null,vec__9712,(0),null);
+var value = cljs.core.nth.call(null,vec__9712,(1),null);
+cljs.core.chunk_append.call(null,b__9709,(function (){var temp__4423__auto__ = decoder.call(null,dogfort.middleware.cookies.strip_quotes.call(null,value));
 if(cljs.core.truth_(temp__4423__auto__)){
 var value__$1 = temp__4423__auto__;
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [name,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"value","value",305978217),value__$1], null)], null);
@@ -110,8 +110,8 @@ return null;
 }
 })());
 
-var G__14835 = (i__14829 + (1));
-i__14829 = G__14835;
+var G__9714 = (i__9708 + (1));
+i__9708 = G__9714;
 continue;
 } else {
 return true;
@@ -119,14 +119,14 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14830),dogfort$middleware$cookies$decode_values_$_iter__14827.call(null,cljs.core.chunk_rest.call(null,s__14828__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9709),dogfort$middleware$cookies$decode_values_$_iter__9706.call(null,cljs.core.chunk_rest.call(null,s__9707__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14830),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9709),null);
 }
 } else {
-var vec__14834 = cljs.core.first.call(null,s__14828__$2);
-var name = cljs.core.nth.call(null,vec__14834,(0),null);
-var value = cljs.core.nth.call(null,vec__14834,(1),null);
+var vec__9713 = cljs.core.first.call(null,s__9707__$2);
+var name = cljs.core.nth.call(null,vec__9713,(0),null);
+var value = cljs.core.nth.call(null,vec__9713,(1),null);
 return cljs.core.cons.call(null,(function (){var temp__4423__auto__ = decoder.call(null,dogfort.middleware.cookies.strip_quotes.call(null,value));
 if(cljs.core.truth_(temp__4423__auto__)){
 var value__$1 = temp__4423__auto__;
@@ -134,7 +134,7 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 } else {
 return null;
 }
-})(),dogfort$middleware$cookies$decode_values_$_iter__14827.call(null,cljs.core.rest.call(null,s__14828__$2)));
+})(),dogfort$middleware$cookies$decode_values_$_iter__9706.call(null,cljs.core.rest.call(null,s__9707__$2)));
 }
 } else {
 return null;
@@ -170,16 +170,16 @@ return encoder.call(null,cljs.core.PersistentArrayMap.fromArray([key,value], tru
 /**
  * Is the attribute valid?
  */
-dogfort.middleware.cookies.valid_attr_QMARK_ = (function dogfort$middleware$cookies$valid_attr_QMARK_(p__14836){
-var vec__14841 = p__14836;
-var key = cljs.core.nth.call(null,vec__14841,(0),null);
-var value = cljs.core.nth.call(null,vec__14841,(1),null);
+dogfort.middleware.cookies.valid_attr_QMARK_ = (function dogfort$middleware$cookies$valid_attr_QMARK_(p__9715){
+var vec__9720 = p__9715;
+var key = cljs.core.nth.call(null,vec__9720,(0),null);
+var value = cljs.core.nth.call(null,vec__9720,(1),null);
 var and__4131__auto__ = cljs.core.contains_QMARK_.call(null,dogfort.middleware.cookies.set_cookie_attrs,key);
 if(and__4131__auto__){
 var and__4131__auto____$1 = cljs.core._EQ_.call(null,(-1),[cljs.core.str(value)].join('').indexOf(";"));
 if(and__4131__auto____$1){
-var G__14844 = (((key instanceof cljs.core.Keyword))?key.fqn:null);
-switch (G__14844) {
+var G__9723 = (((key instanceof cljs.core.Keyword))?key.fqn:null);
+switch (G__9723) {
 case "max-age":
 return cljs.core.integer_QMARK_.call(null,value);
 
@@ -208,24 +208,24 @@ if(cljs.core.every_QMARK_.call(null,dogfort.middleware.cookies.valid_attr_QMARK_
 throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.call(null,cljs.core.list(new cljs.core.Symbol(null,"every?","every?",2083724064,null),new cljs.core.Symbol(null,"valid-attr?","valid-attr?",657119621,null),new cljs.core.Symbol(null,"attrs","attrs",-450137186,null))))].join('')));
 }
 
-var iter__4915__auto__ = (function dogfort$middleware$cookies$write_attr_map_$_iter__14854(s__14855){
+var iter__4915__auto__ = (function dogfort$middleware$cookies$write_attr_map_$_iter__9733(s__9734){
 return (new cljs.core.LazySeq(null,(function (){
-var s__14855__$1 = s__14855;
+var s__9734__$1 = s__9734;
 while(true){
-var temp__4425__auto__ = cljs.core.seq.call(null,s__14855__$1);
+var temp__4425__auto__ = cljs.core.seq.call(null,s__9734__$1);
 if(temp__4425__auto__){
-var s__14855__$2 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__14855__$2)){
-var c__4913__auto__ = cljs.core.chunk_first.call(null,s__14855__$2);
+var s__9734__$2 = temp__4425__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__9734__$2)){
+var c__4913__auto__ = cljs.core.chunk_first.call(null,s__9734__$2);
 var size__4914__auto__ = cljs.core.count.call(null,c__4913__auto__);
-var b__14857 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
-if((function (){var i__14856 = (0);
+var b__9736 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
+if((function (){var i__9735 = (0);
 while(true){
-if((i__14856 < size__4914__auto__)){
-var vec__14860 = cljs.core._nth.call(null,c__4913__auto__,i__14856);
-var key = cljs.core.nth.call(null,vec__14860,(0),null);
-var value = cljs.core.nth.call(null,vec__14860,(1),null);
-cljs.core.chunk_append.call(null,b__14857,(function (){var attr_name = cljs.core.name.call(null,dogfort.middleware.cookies.set_cookie_attrs.call(null,key));
+if((i__9735 < size__4914__auto__)){
+var vec__9739 = cljs.core._nth.call(null,c__4913__auto__,i__9735);
+var key = cljs.core.nth.call(null,vec__9739,(0),null);
+var value = cljs.core.nth.call(null,vec__9739,(1),null);
+cljs.core.chunk_append.call(null,b__9736,(function (){var attr_name = cljs.core.name.call(null,dogfort.middleware.cookies.set_cookie_attrs.call(null,key));
 if(value === true){
 return [cljs.core.str(";"),cljs.core.str(attr_name)].join('');
 } else {
@@ -238,8 +238,8 @@ return [cljs.core.str(";"),cljs.core.str(attr_name),cljs.core.str("="),cljs.core
 }
 })());
 
-var G__14862 = (i__14856 + (1));
-i__14856 = G__14862;
+var G__9741 = (i__9735 + (1));
+i__9735 = G__9741;
 continue;
 } else {
 return true;
@@ -247,14 +247,14 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14857),dogfort$middleware$cookies$write_attr_map_$_iter__14854.call(null,cljs.core.chunk_rest.call(null,s__14855__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9736),dogfort$middleware$cookies$write_attr_map_$_iter__9733.call(null,cljs.core.chunk_rest.call(null,s__9734__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14857),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9736),null);
 }
 } else {
-var vec__14861 = cljs.core.first.call(null,s__14855__$2);
-var key = cljs.core.nth.call(null,vec__14861,(0),null);
-var value = cljs.core.nth.call(null,vec__14861,(1),null);
+var vec__9740 = cljs.core.first.call(null,s__9734__$2);
+var key = cljs.core.nth.call(null,vec__9740,(0),null);
+var value = cljs.core.nth.call(null,vec__9740,(1),null);
 return cljs.core.cons.call(null,(function (){var attr_name = cljs.core.name.call(null,dogfort.middleware.cookies.set_cookie_attrs.call(null,key));
 if(value === true){
 return [cljs.core.str(";"),cljs.core.str(attr_name)].join('');
@@ -266,7 +266,7 @@ return [cljs.core.str(";"),cljs.core.str(attr_name),cljs.core.str("="),cljs.core
 
 }
 }
-})(),dogfort$middleware$cookies$write_attr_map_$_iter__14854.call(null,cljs.core.rest.call(null,s__14855__$2)));
+})(),dogfort$middleware$cookies$write_attr_map_$_iter__9733.call(null,cljs.core.rest.call(null,s__9734__$2)));
 }
 } else {
 return null;
@@ -281,27 +281,27 @@ return iter__4915__auto__.call(null,attrs);
  * Turn a map of cookies into a seq of strings for a Set-Cookie header.
  */
 dogfort.middleware.cookies.write_cookies = (function dogfort$middleware$cookies$write_cookies(cookies,encoder){
-var iter__4915__auto__ = (function dogfort$middleware$cookies$write_cookies_$_iter__14871(s__14872){
+var iter__4915__auto__ = (function dogfort$middleware$cookies$write_cookies_$_iter__9750(s__9751){
 return (new cljs.core.LazySeq(null,(function (){
-var s__14872__$1 = s__14872;
+var s__9751__$1 = s__9751;
 while(true){
-var temp__4425__auto__ = cljs.core.seq.call(null,s__14872__$1);
+var temp__4425__auto__ = cljs.core.seq.call(null,s__9751__$1);
 if(temp__4425__auto__){
-var s__14872__$2 = temp__4425__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__14872__$2)){
-var c__4913__auto__ = cljs.core.chunk_first.call(null,s__14872__$2);
+var s__9751__$2 = temp__4425__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__9751__$2)){
+var c__4913__auto__ = cljs.core.chunk_first.call(null,s__9751__$2);
 var size__4914__auto__ = cljs.core.count.call(null,c__4913__auto__);
-var b__14874 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
-if((function (){var i__14873 = (0);
+var b__9753 = cljs.core.chunk_buffer.call(null,size__4914__auto__);
+if((function (){var i__9752 = (0);
 while(true){
-if((i__14873 < size__4914__auto__)){
-var vec__14877 = cljs.core._nth.call(null,c__4913__auto__,i__14873);
-var key = cljs.core.nth.call(null,vec__14877,(0),null);
-var value = cljs.core.nth.call(null,vec__14877,(1),null);
-cljs.core.chunk_append.call(null,b__14874,((cljs.core.map_QMARK_.call(null,value))?cljs.core.apply.call(null,cljs.core.str,dogfort.middleware.cookies.write_value.call(null,key,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(value),encoder),dogfort.middleware.cookies.write_attr_map.call(null,cljs.core.dissoc.call(null,value,new cljs.core.Keyword(null,"value","value",305978217)))):dogfort.middleware.cookies.write_value.call(null,key,value,encoder)));
+if((i__9752 < size__4914__auto__)){
+var vec__9756 = cljs.core._nth.call(null,c__4913__auto__,i__9752);
+var key = cljs.core.nth.call(null,vec__9756,(0),null);
+var value = cljs.core.nth.call(null,vec__9756,(1),null);
+cljs.core.chunk_append.call(null,b__9753,((cljs.core.map_QMARK_.call(null,value))?cljs.core.apply.call(null,cljs.core.str,dogfort.middleware.cookies.write_value.call(null,key,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(value),encoder),dogfort.middleware.cookies.write_attr_map.call(null,cljs.core.dissoc.call(null,value,new cljs.core.Keyword(null,"value","value",305978217)))):dogfort.middleware.cookies.write_value.call(null,key,value,encoder)));
 
-var G__14879 = (i__14873 + (1));
-i__14873 = G__14879;
+var G__9758 = (i__9752 + (1));
+i__9752 = G__9758;
 continue;
 } else {
 return true;
@@ -309,15 +309,15 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14874),dogfort$middleware$cookies$write_cookies_$_iter__14871.call(null,cljs.core.chunk_rest.call(null,s__14872__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9753),dogfort$middleware$cookies$write_cookies_$_iter__9750.call(null,cljs.core.chunk_rest.call(null,s__9751__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__14874),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__9753),null);
 }
 } else {
-var vec__14878 = cljs.core.first.call(null,s__14872__$2);
-var key = cljs.core.nth.call(null,vec__14878,(0),null);
-var value = cljs.core.nth.call(null,vec__14878,(1),null);
-return cljs.core.cons.call(null,((cljs.core.map_QMARK_.call(null,value))?cljs.core.apply.call(null,cljs.core.str,dogfort.middleware.cookies.write_value.call(null,key,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(value),encoder),dogfort.middleware.cookies.write_attr_map.call(null,cljs.core.dissoc.call(null,value,new cljs.core.Keyword(null,"value","value",305978217)))):dogfort.middleware.cookies.write_value.call(null,key,value,encoder)),dogfort$middleware$cookies$write_cookies_$_iter__14871.call(null,cljs.core.rest.call(null,s__14872__$2)));
+var vec__9757 = cljs.core.first.call(null,s__9751__$2);
+var key = cljs.core.nth.call(null,vec__9757,(0),null);
+var value = cljs.core.nth.call(null,vec__9757,(1),null);
+return cljs.core.cons.call(null,((cljs.core.map_QMARK_.call(null,value))?cljs.core.apply.call(null,cljs.core.str,dogfort.middleware.cookies.write_value.call(null,key,new cljs.core.Keyword(null,"value","value",305978217).cljs$core$IFn$_invoke$arity$1(value),encoder),dogfort.middleware.cookies.write_attr_map.call(null,cljs.core.dissoc.call(null,value,new cljs.core.Keyword(null,"value","value",305978217)))):dogfort.middleware.cookies.write_value.call(null,key,value,encoder)),dogfort$middleware$cookies$write_cookies_$_iter__9750.call(null,cljs.core.rest.call(null,s__9751__$2)));
 }
 } else {
 return null;
@@ -345,14 +345,14 @@ return response;
  */
 dogfort.middleware.cookies.cookies_request = (function dogfort$middleware$cookies$cookies_request(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___14886 = arguments.length;
-var i__5202__auto___14887 = (0);
+var len__5201__auto___9765 = arguments.length;
+var i__5202__auto___9766 = (0);
 while(true){
-if((i__5202__auto___14887 < len__5201__auto___14886)){
-args__5208__auto__.push((arguments[i__5202__auto___14887]));
+if((i__5202__auto___9766 < len__5201__auto___9765)){
+args__5208__auto__.push((arguments[i__5202__auto___9766]));
 
-var G__14888 = (i__5202__auto___14887 + (1));
-i__5202__auto___14887 = G__14888;
+var G__9767 = (i__5202__auto___9766 + (1));
+i__5202__auto___9766 = G__9767;
 continue;
 } else {
 }
@@ -363,11 +363,11 @@ var argseq__5209__auto__ = ((((1) < args__5208__auto__.length))?(new cljs.core.I
 return dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5209__auto__);
 });
 
-dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__14882){
-var vec__14883 = p__14882;
-var map__14884 = cljs.core.nth.call(null,vec__14883,(0),null);
-var map__14884__$1 = ((((!((map__14884 == null)))?((((map__14884.cljs$lang$protocol_mask$partition0$ & (64))) || (map__14884.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14884):map__14884);
-var decoder = cljs.core.get.call(null,map__14884__$1,new cljs.core.Keyword(null,"decoder","decoder",1169558843),dogfort.util.codec.form_decode_str);
+dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$variadic = (function (request,p__9761){
+var vec__9762 = p__9761;
+var map__9763 = cljs.core.nth.call(null,vec__9762,(0),null);
+var map__9763__$1 = ((((!((map__9763 == null)))?((((map__9763.cljs$lang$protocol_mask$partition0$ & (64))) || (map__9763.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__9763):map__9763);
+var decoder = cljs.core.get.call(null,map__9763__$1,new cljs.core.Keyword(null,"decoder","decoder",1169558843),dogfort.util.codec.form_decode_str);
 if(cljs.core.truth_(request.call(null,new cljs.core.Keyword(null,"cookies","cookies",1839416329)))){
 return request;
 } else {
@@ -377,10 +377,10 @@ return cljs.core.assoc.call(null,request,new cljs.core.Keyword(null,"cookies","c
 
 dogfort.middleware.cookies.cookies_request.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.cookies.cookies_request.cljs$lang$applyTo = (function (seq14880){
-var G__14881 = cljs.core.first.call(null,seq14880);
-var seq14880__$1 = cljs.core.next.call(null,seq14880);
-return dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$variadic(G__14881,seq14880__$1);
+dogfort.middleware.cookies.cookies_request.cljs$lang$applyTo = (function (seq9759){
+var G__9760 = cljs.core.first.call(null,seq9759);
+var seq9759__$1 = cljs.core.next.call(null,seq9759);
+return dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$variadic(G__9760,seq9759__$1);
 });
 /**
  * For responses with :cookies, adds Set-Cookie header and returns response
@@ -388,14 +388,14 @@ return dogfort.middleware.cookies.cookies_request.cljs$core$IFn$_invoke$arity$va
  */
 dogfort.middleware.cookies.cookies_response = (function dogfort$middleware$cookies$cookies_response(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___14896 = arguments.length;
-var i__5202__auto___14897 = (0);
+var len__5201__auto___9775 = arguments.length;
+var i__5202__auto___9776 = (0);
 while(true){
-if((i__5202__auto___14897 < len__5201__auto___14896)){
-args__5208__auto__.push((arguments[i__5202__auto___14897]));
+if((i__5202__auto___9776 < len__5201__auto___9775)){
+args__5208__auto__.push((arguments[i__5202__auto___9776]));
 
-var G__14898 = (i__5202__auto___14897 + (1));
-i__5202__auto___14897 = G__14898;
+var G__9777 = (i__5202__auto___9776 + (1));
+i__5202__auto___9776 = G__9777;
 continue;
 } else {
 }
@@ -406,43 +406,43 @@ var argseq__5209__auto__ = ((((1) < args__5208__auto__.length))?(new cljs.core.I
 return dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5209__auto__);
 });
 
-dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,p__14892){
-var vec__14893 = p__14892;
-var map__14894 = cljs.core.nth.call(null,vec__14893,(0),null);
-var map__14894__$1 = ((((!((map__14894 == null)))?((((map__14894.cljs$lang$protocol_mask$partition0$ & (64))) || (map__14894.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14894):map__14894);
-var encoder = cljs.core.get.call(null,map__14894__$1,new cljs.core.Keyword(null,"encoder","encoder",-1113127834),dogfort.util.codec.form_encode);
-var promise__5386__auto__ = redlobster.promise.promise.call(null);
-var realise__5387__auto__ = ((function (promise__5386__auto__,vec__14893,map__14894,map__14894__$1,encoder){
-return (function (promise__5386__auto____$1,value__5388__auto__){
-return redlobster.promise.realise.call(null,promise__5386__auto____$1,value__5388__auto__);
-});})(promise__5386__auto__,vec__14893,map__14894,map__14894__$1,encoder))
+dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$variadic = (function (response,p__9771){
+var vec__9772 = p__9771;
+var map__9773 = cljs.core.nth.call(null,vec__9772,(0),null);
+var map__9773__$1 = ((((!((map__9773 == null)))?((((map__9773.cljs$lang$protocol_mask$partition0$ & (64))) || (map__9773.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__9773):map__9773);
+var encoder = cljs.core.get.call(null,map__9773__$1,new cljs.core.Keyword(null,"encoder","encoder",-1113127834),dogfort.util.codec.form_encode);
+var promise__9651__auto__ = redlobster.promise.promise.call(null);
+var realise__9652__auto__ = ((function (promise__9651__auto__,vec__9772,map__9773,map__9773__$1,encoder){
+return (function (promise__9651__auto____$1,value__9653__auto__){
+return redlobster.promise.realise.call(null,promise__9651__auto____$1,value__9653__auto__);
+});})(promise__9651__auto__,vec__9772,map__9773,map__9773__$1,encoder))
 ;
-var realise_error__5389__auto__ = ((function (promise__5386__auto__,realise__5387__auto__,vec__14893,map__14894,map__14894__$1,encoder){
-return (function (promise__5386__auto____$1,value__5388__auto__){
-return redlobster.promise.realise_error.call(null,promise__5386__auto____$1,value__5388__auto__);
-});})(promise__5386__auto__,realise__5387__auto__,vec__14893,map__14894,map__14894__$1,encoder))
+var realise_error__9654__auto__ = ((function (promise__9651__auto__,realise__9652__auto__,vec__9772,map__9773,map__9773__$1,encoder){
+return (function (promise__9651__auto____$1,value__9653__auto__){
+return redlobster.promise.realise_error.call(null,promise__9651__auto____$1,value__9653__auto__);
+});})(promise__9651__auto__,realise__9652__auto__,vec__9772,map__9773,map__9773__$1,encoder))
 ;
-var realise = cljs.core.partial.call(null,realise__5387__auto__,promise__5386__auto__);
-var realise_error = cljs.core.partial.call(null,realise_error__5389__auto__,promise__5386__auto__);
-redlobster.promise.on_realised.call(null,response,((function (promise__5386__auto__,realise__5387__auto__,realise_error__5389__auto__,realise,realise_error,vec__14893,map__14894,map__14894__$1,encoder){
-return (function (p1__14889_SHARP_){
-return realise.call(null,cljs.core.dissoc.call(null,dogfort.middleware.cookies.set_cookies.call(null,p1__14889_SHARP_,encoder),new cljs.core.Keyword(null,"cookies","cookies",1839416329)));
-});})(promise__5386__auto__,realise__5387__auto__,realise_error__5389__auto__,realise,realise_error,vec__14893,map__14894,map__14894__$1,encoder))
-,((function (promise__5386__auto__,realise__5387__auto__,realise_error__5389__auto__,realise,realise_error,vec__14893,map__14894,map__14894__$1,encoder){
+var realise = cljs.core.partial.call(null,realise__9652__auto__,promise__9651__auto__);
+var realise_error = cljs.core.partial.call(null,realise_error__9654__auto__,promise__9651__auto__);
+redlobster.promise.on_realised.call(null,response,((function (promise__9651__auto__,realise__9652__auto__,realise_error__9654__auto__,realise,realise_error,vec__9772,map__9773,map__9773__$1,encoder){
+return (function (p1__9768_SHARP_){
+return realise.call(null,cljs.core.dissoc.call(null,dogfort.middleware.cookies.set_cookies.call(null,p1__9768_SHARP_,encoder),new cljs.core.Keyword(null,"cookies","cookies",1839416329)));
+});})(promise__9651__auto__,realise__9652__auto__,realise_error__9654__auto__,realise,realise_error,vec__9772,map__9773,map__9773__$1,encoder))
+,((function (promise__9651__auto__,realise__9652__auto__,realise_error__9654__auto__,realise,realise_error,vec__9772,map__9773,map__9773__$1,encoder){
 return (function (){
 return cljs.core.List.EMPTY;
-});})(promise__5386__auto__,realise__5387__auto__,realise_error__5389__auto__,realise,realise_error,vec__14893,map__14894,map__14894__$1,encoder))
+});})(promise__9651__auto__,realise__9652__auto__,realise_error__9654__auto__,realise,realise_error,vec__9772,map__9773,map__9773__$1,encoder))
 );
 
-return promise__5386__auto__;
+return promise__9651__auto__;
 });
 
 dogfort.middleware.cookies.cookies_response.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.cookies.cookies_response.cljs$lang$applyTo = (function (seq14890){
-var G__14891 = cljs.core.first.call(null,seq14890);
-var seq14890__$1 = cljs.core.next.call(null,seq14890);
-return dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$variadic(G__14891,seq14890__$1);
+dogfort.middleware.cookies.cookies_response.cljs$lang$applyTo = (function (seq9769){
+var G__9770 = cljs.core.first.call(null,seq9769);
+var seq9769__$1 = cljs.core.next.call(null,seq9769);
+return dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$variadic(G__9770,seq9769__$1);
 });
 /**
  * Parses the cookies in the request map, then assocs the resulting map
@@ -476,14 +476,14 @@ return dogfort.middleware.cookies.cookies_response.cljs$core$IFn$_invoke$arity$v
  */
 dogfort.middleware.cookies.wrap_cookies = (function dogfort$middleware$cookies$wrap_cookies(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___14905 = arguments.length;
-var i__5202__auto___14906 = (0);
+var len__5201__auto___9784 = arguments.length;
+var i__5202__auto___9785 = (0);
 while(true){
-if((i__5202__auto___14906 < len__5201__auto___14905)){
-args__5208__auto__.push((arguments[i__5202__auto___14906]));
+if((i__5202__auto___9785 < len__5201__auto___9784)){
+args__5208__auto__.push((arguments[i__5202__auto___9785]));
 
-var G__14907 = (i__5202__auto___14906 + (1));
-i__5202__auto___14906 = G__14907;
+var G__9786 = (i__5202__auto___9785 + (1));
+i__5202__auto___9785 = G__9786;
 continue;
 } else {
 }
@@ -494,25 +494,25 @@ var argseq__5209__auto__ = ((((1) < args__5208__auto__.length))?(new cljs.core.I
 return dogfort.middleware.cookies.wrap_cookies.cljs$core$IFn$_invoke$arity$variadic((arguments[(0)]),argseq__5209__auto__);
 });
 
-dogfort.middleware.cookies.wrap_cookies.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__14901){
-var vec__14902 = p__14901;
-var map__14903 = cljs.core.nth.call(null,vec__14902,(0),null);
-var map__14903__$1 = ((((!((map__14903 == null)))?((((map__14903.cljs$lang$protocol_mask$partition0$ & (64))) || (map__14903.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__14903):map__14903);
-var decoder = cljs.core.get.call(null,map__14903__$1,new cljs.core.Keyword(null,"decoder","decoder",1169558843),dogfort.util.codec.form_decode_str);
-var encoder = cljs.core.get.call(null,map__14903__$1,new cljs.core.Keyword(null,"encoder","encoder",-1113127834),dogfort.util.codec.form_encode);
-return ((function (vec__14902,map__14903,map__14903__$1,decoder,encoder){
+dogfort.middleware.cookies.wrap_cookies.cljs$core$IFn$_invoke$arity$variadic = (function (handler,p__9780){
+var vec__9781 = p__9780;
+var map__9782 = cljs.core.nth.call(null,vec__9781,(0),null);
+var map__9782__$1 = ((((!((map__9782 == null)))?((((map__9782.cljs$lang$protocol_mask$partition0$ & (64))) || (map__9782.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__9782):map__9782);
+var decoder = cljs.core.get.call(null,map__9782__$1,new cljs.core.Keyword(null,"decoder","decoder",1169558843),dogfort.util.codec.form_decode_str);
+var encoder = cljs.core.get.call(null,map__9782__$1,new cljs.core.Keyword(null,"encoder","encoder",-1113127834),dogfort.util.codec.form_encode);
+return ((function (vec__9781,map__9782,map__9782__$1,decoder,encoder){
 return (function (request){
 return dogfort.middleware.cookies.cookies_response.call(null,handler.call(null,dogfort.middleware.cookies.cookies_request.call(null,request,new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"decoder","decoder",1169558843),decoder], null))),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"encoder","encoder",-1113127834),encoder], null));
 });
-;})(vec__14902,map__14903,map__14903__$1,decoder,encoder))
+;})(vec__9781,map__9782,map__9782__$1,decoder,encoder))
 });
 
 dogfort.middleware.cookies.wrap_cookies.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.cookies.wrap_cookies.cljs$lang$applyTo = (function (seq14899){
-var G__14900 = cljs.core.first.call(null,seq14899);
-var seq14899__$1 = cljs.core.next.call(null,seq14899);
-return dogfort.middleware.cookies.wrap_cookies.cljs$core$IFn$_invoke$arity$variadic(G__14900,seq14899__$1);
+dogfort.middleware.cookies.wrap_cookies.cljs$lang$applyTo = (function (seq9778){
+var G__9779 = cljs.core.first.call(null,seq9778);
+var seq9778__$1 = cljs.core.next.call(null,seq9778);
+return dogfort.middleware.cookies.wrap_cookies.cljs$core$IFn$_invoke$arity$variadic(G__9779,seq9778__$1);
 });
 
 //# sourceMappingURL=cookies.js.map

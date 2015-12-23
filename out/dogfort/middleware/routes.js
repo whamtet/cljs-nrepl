@@ -10,19 +10,19 @@ goog.require('dogfort.util.codec');
  * route bindings.
  */
 dogfort.middleware.routes.route_match = (function dogfort$middleware$routes$route_match(url,matcher){
-var G__14998 = matcher;
-var vec__14999 = G__14998;
-var m = cljs.core.nth.call(null,vec__14999,(0),null);
-var matcher__$1 = cljs.core.nthnext.call(null,vec__14999,(1));
+var G__10384 = matcher;
+var vec__10385 = G__10384;
+var m = cljs.core.nth.call(null,vec__10385,(0),null);
+var matcher__$1 = cljs.core.nthnext.call(null,vec__10385,(1));
 var url__$1 = url;
 var res = cljs.core.PersistentArrayMap.EMPTY;
-var G__14998__$1 = G__14998;
+var G__10384__$1 = G__10384;
 var url__$2 = url__$1;
 var res__$1 = res;
 while(true){
-var vec__15000 = G__14998__$1;
-var m__$1 = cljs.core.nth.call(null,vec__15000,(0),null);
-var matcher__$2 = cljs.core.nthnext.call(null,vec__15000,(1));
+var vec__10386 = G__10384__$1;
+var m__$1 = cljs.core.nth.call(null,vec__10386,(0),null);
+var matcher__$2 = cljs.core.nthnext.call(null,vec__10386,(1));
 var url__$3 = url__$2;
 var res__$2 = res__$1;
 if(cljs.core.empty_QMARK_.call(null,url__$3)){
@@ -38,21 +38,21 @@ return cljs.core.assoc.call(null,res__$2,new cljs.core.Keyword(null,"*","*",-129
 var r = cljs.core.re_find.call(null,/\/[^\/]*/,url__$3).substring((1));
 var url__$4 = url__$3.substring((cljs.core.count.call(null,r) + (1)));
 if((m__$1 instanceof cljs.core.Keyword)){
-var G__15001 = matcher__$2;
-var G__15002 = url__$4;
-var G__15003 = cljs.core.assoc.call(null,res__$2,m__$1,dogfort.util.codec.url_decode.call(null,r));
-G__14998__$1 = G__15001;
-url__$2 = G__15002;
-res__$1 = G__15003;
+var G__10387 = matcher__$2;
+var G__10388 = url__$4;
+var G__10389 = cljs.core.assoc.call(null,res__$2,m__$1,dogfort.util.codec.url_decode.call(null,r));
+G__10384__$1 = G__10387;
+url__$2 = G__10388;
+res__$1 = G__10389;
 continue;
 } else {
 if(cljs.core._EQ_.call(null,m__$1,[cljs.core.str("/"),cljs.core.str(r)].join(''))){
-var G__15004 = matcher__$2;
-var G__15005 = url__$4;
-var G__15006 = res__$2;
-G__14998__$1 = G__15004;
-url__$2 = G__15005;
-res__$1 = G__15006;
+var G__10390 = matcher__$2;
+var G__10391 = url__$4;
+var G__10392 = res__$2;
+G__10384__$1 = G__10390;
+url__$2 = G__10391;
+res__$1 = G__10392;
 continue;
 } else {
 return null;
@@ -81,14 +81,14 @@ return null;
 });
 dogfort.middleware.routes.routing = (function dogfort$middleware$routes$routing(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___15010 = arguments.length;
-var i__5202__auto___15011 = (0);
+var len__5201__auto___10396 = arguments.length;
+var i__5202__auto___10397 = (0);
 while(true){
-if((i__5202__auto___15011 < len__5201__auto___15010)){
-args__5208__auto__.push((arguments[i__5202__auto___15011]));
+if((i__5202__auto___10397 < len__5201__auto___10396)){
+args__5208__auto__.push((arguments[i__5202__auto___10397]));
 
-var G__15012 = (i__5202__auto___15011 + (1));
-i__5202__auto___15011 = G__15012;
+var G__10398 = (i__5202__auto___10397 + (1));
+i__5202__auto___10397 = G__10398;
 continue;
 } else {
 }
@@ -100,8 +100,8 @@ return dogfort.middleware.routes.routing.cljs$core$IFn$_invoke$arity$variadic((a
 });
 
 dogfort.middleware.routes.routing.cljs$core$IFn$_invoke$arity$variadic = (function (request,handlers){
-var response = (function (){var or__4143__auto__ = cljs.core.some.call(null,(function (p1__15007_SHARP_){
-return p1__15007_SHARP_.call(null,request);
+var response = (function (){var or__4143__auto__ = cljs.core.some.call(null,(function (p1__10393_SHARP_){
+return p1__10393_SHARP_.call(null,request);
 }),handlers);
 if(cljs.core.truth_(or__4143__auto__)){
 return or__4143__auto__;
@@ -123,21 +123,21 @@ return redlobster.promise.promise.call(null,dogfort.util.response.response.call(
 
 dogfort.middleware.routes.routing.cljs$lang$maxFixedArity = (1);
 
-dogfort.middleware.routes.routing.cljs$lang$applyTo = (function (seq15008){
-var G__15009 = cljs.core.first.call(null,seq15008);
-var seq15008__$1 = cljs.core.next.call(null,seq15008);
-return dogfort.middleware.routes.routing.cljs$core$IFn$_invoke$arity$variadic(G__15009,seq15008__$1);
+dogfort.middleware.routes.routing.cljs$lang$applyTo = (function (seq10394){
+var G__10395 = cljs.core.first.call(null,seq10394);
+var seq10394__$1 = cljs.core.next.call(null,seq10394);
+return dogfort.middleware.routes.routing.cljs$core$IFn$_invoke$arity$variadic(G__10395,seq10394__$1);
 });
 dogfort.middleware.routes.routes = (function dogfort$middleware$routes$routes(var_args){
 var args__5208__auto__ = [];
-var len__5201__auto___15015 = arguments.length;
-var i__5202__auto___15016 = (0);
+var len__5201__auto___10401 = arguments.length;
+var i__5202__auto___10402 = (0);
 while(true){
-if((i__5202__auto___15016 < len__5201__auto___15015)){
-args__5208__auto__.push((arguments[i__5202__auto___15016]));
+if((i__5202__auto___10402 < len__5201__auto___10401)){
+args__5208__auto__.push((arguments[i__5202__auto___10402]));
 
-var G__15017 = (i__5202__auto___15016 + (1));
-i__5202__auto___15016 = G__15017;
+var G__10403 = (i__5202__auto___10402 + (1));
+i__5202__auto___10402 = G__10403;
 continue;
 } else {
 }
@@ -149,15 +149,15 @@ return dogfort.middleware.routes.routes.cljs$core$IFn$_invoke$arity$variadic(arg
 });
 
 dogfort.middleware.routes.routes.cljs$core$IFn$_invoke$arity$variadic = (function (handlers){
-return (function (p1__15013_SHARP_){
-return cljs.core.apply.call(null,dogfort.middleware.routes.routing,p1__15013_SHARP_,handlers);
+return (function (p1__10399_SHARP_){
+return cljs.core.apply.call(null,dogfort.middleware.routes.routing,p1__10399_SHARP_,handlers);
 });
 });
 
 dogfort.middleware.routes.routes.cljs$lang$maxFixedArity = (0);
 
-dogfort.middleware.routes.routes.cljs$lang$applyTo = (function (seq15014){
-return dogfort.middleware.routes.routes.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq15014));
+dogfort.middleware.routes.routes.cljs$lang$applyTo = (function (seq10400){
+return dogfort.middleware.routes.routes.cljs$core$IFn$_invoke$arity$variadic(cljs.core.seq.call(null,seq10400));
 });
 
 //# sourceMappingURL=routes.js.map

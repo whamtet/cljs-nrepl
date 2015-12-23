@@ -20,11 +20,17 @@
    :headers {:location url}
    :body ""})
 
+;; ***
+;; wrap output to match drawbridge nrepl http client
+;; ***
+
 (defn clj->json
   [ds]
   (-> ds clj->js js/JSON.stringify))
 
-(defn clj->json2
+(defn
+  clj->json2
+  "the drawbridge client quirkily won't accept standard json"
   [ds]
   (let [
         ds (concat ["["] ds ["]"])
@@ -43,6 +49,10 @@
      (merge {:session session :id id} m)
      {:session session :id id :status #{:done}}
      ])})
+
+;; ***
+;; wrap clojurescript self compilation
+;; ***
 
 (defn my-eval [{:keys [source]}]
   (try
@@ -73,6 +83,10 @@
       (println "error" e)
       (promise (realise "")))))
 
+;; ***
+;; generate uuid
+;; ***
+
 (defn rand-subseq [n] (repeatedly n #(rand-nth "abcdefghijklmnopqrstuvwxyz0123456789")))
 (defn uuid []
   (apply str
@@ -80,8 +94,9 @@
           (interpose "-"
                      (map rand-subseq [8 4 4 4 12])))))
 
-;;handle the messages
-;;lazy, all synchronous
+;; ***
+;; handle nrepl client
+;; ***
 
 (defmulti op-handle :op)
 
@@ -106,6 +121,10 @@
 
 (defmethod op-handle :default [{:keys [op]} cookie-session]
   (throw (js/Error. (str op " not supported."))))
+
+;; ***
+;; handler
+;; ***
 
 (defroutes handler
   (ANY "/repl" req
